@@ -28,7 +28,17 @@ class ArticlesUseCase(private val service: ArticlesService) {
                 ?: Constants.DEFAULT_IMAGE_URL
         )
     }
-
+    /** Use the clock system with the current system's default time zone.
+     * A line returns how many days ago the input date is compared to today.
+     * This returns zero if the date is the current date, or a negative integer
+     * indicating how many days have passed.
+     *
+     * Then, we construct the result string.
+     * The 'daysAgo' value is a negative integer, so we get its absolute value.
+     * - If the absolute difference is more than 1, the result is "{value} days ago".
+     * - If the absolute difference is exactly 1, the result is "Yesterday".
+     * - Otherwise, the difference is 0, and the result is "Today".
+     * */
     @OptIn(ExperimentalTime::class)
     private fun getDaysAgoString(date: String): String {
         val today = Clock.System.todayIn(TimeZone.currentSystemDefault())

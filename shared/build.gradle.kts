@@ -29,12 +29,16 @@ kotlin {
     
     sourceSets {
         commonMain.dependencies {
-            // put your Multiplatform dependencies here
+            // Multiplatform dependencies
             implementation(libs.kotlinx.coroutines.core)
+
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
+
             implementation(libs.koin.core)
+
+            implementation(libs.kotlinx.datetime)
         }
 
         androidMain.dependencies {
