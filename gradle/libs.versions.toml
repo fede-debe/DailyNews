@@ -19,7 +19,6 @@ coilCompose = "2.7.0"
 navigationCompose = "2.9.3"
 skie = "0.10.5"
 ktorClient = "3.2.3"
-kotlinxDatetime = "0.7.1"
 koin = "4.1.0"
 
 [libraries]
@@ -37,8 +36,6 @@ androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecyc
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
-
-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClient" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorClient" }
