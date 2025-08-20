@@ -1,4 +1,4 @@
-package com.example.dailynews.articles
+package com.example.dailynews.articles.domain
 
 data class Article(
     val title: String,

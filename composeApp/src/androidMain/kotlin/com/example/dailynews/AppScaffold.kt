@@ -9,7 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.dailynews.articles.ArticlesViewModel
+import com.example.dailynews.articles.ui.ArticlesViewModel
 import com.example.dailynews.screens.AboutScreen
 import com.example.dailynews.screens.ArticlesScreen
 import com.example.dailynews.screens.Screens

@@ -1,10 +1,19 @@
-package com.example.dailynews.articles
+package com.example.dailynews.articles.ui
 
 import com.example.dailynews.BaseViewModel
+import com.example.dailynews.articles.domain.Article
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+
+
+/** Default values are set to be able to update one value at the time */
+data class ArticlesState (
+    val articles: List<Article> = listOf(),
+    val loading: Boolean = false,
+    val error: String? = null
+)
 
 class ArticlesViewModel: BaseViewModel() {
 
