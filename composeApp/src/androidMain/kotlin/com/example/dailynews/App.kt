@@ -8,13 +8,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.dailynews.articles.ui.ArticlesViewModel
 import com.example.dailynews.screens.ArticlesScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun App(viewModel: ArticlesViewModel) {
+fun App() {
     MaterialTheme {
         Column(
             modifier = Modifier
@@ -24,7 +23,7 @@ fun App(viewModel: ArticlesViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
 //            AboutScreen()
-            ArticlesScreen(articlesViewModel = viewModel, onAboutButtonClick = {})
+            ArticlesScreen(onAboutButtonClick = {})
         }
     }
 }
