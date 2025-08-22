@@ -1,6 +1,7 @@
 package com.example.dailynews.articles.service
 
 import com.example.dailynews.Constants
+import com.example.dailynews.articles.data.ArticlesRepository
 import com.example.dailynews.articles.domain.Article
 import com.example.dailynews.articles.domain.ArticleRaw
 import kotlinx.datetime.TimeZone
@@ -12,10 +13,10 @@ import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
-class ArticlesUseCase(private val service: ArticlesService) {
+class ArticlesUseCase(private val repository: ArticlesRepository) {
 
-    suspend fun getArticles(): List<Article> {
-        val articlesRaw = service.fetchArticles()
+    suspend fun getArticles(forceFetch: Boolean): List<Article> {
+        val articlesRaw = repository.getArticles(forceFetch)
         return mapArticles(articlesRaw)
     }
 
