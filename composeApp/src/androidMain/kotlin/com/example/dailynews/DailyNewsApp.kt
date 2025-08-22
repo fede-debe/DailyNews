@@ -1,6 +1,7 @@
 package com.example.dailynews
 
 import android.app.Application
+import com.example.dailynews.di.databaseModule
 import com.example.dailynews.di.sharedKoinModules
 import com.example.dailynews.di.viewModelsModule
 import org.koin.android.ext.koin.androidContext
@@ -26,7 +27,7 @@ class DailyNewsApp: Application() {
     }
 
     private fun initKoin() {
-        val modules = sharedKoinModules + viewModelsModule
+        val modules = sharedKoinModules + viewModelsModule + databaseModule
 
         startKoin {
             androidContext(this@DailyNewsApp)
