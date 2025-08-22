@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.skie)
     alias(libs.plugins.kotlinPluginSerialization)
+    alias(libs.plugins.sqlDelight)
 }
 
 kotlin {
@@ -31,6 +32,7 @@ kotlin {
         commonMain.dependencies {
             // Multiplatform dependencies
             implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.sql.coroutines.extensions)
 
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
@@ -44,10 +46,12 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
             implementation(libs.ktor.client.android)
+            implementation(libs.sql.android.driver)
         }
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.sql.native.driver)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -64,5 +68,13 @@ android {
     }
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
+    }
+}
+
+sqldelight {
+    databases {
+        create(name = "DailyNewsDatabase") {
+            packageName.set("com.example.dailynews.db")
+        }
     }
 }
