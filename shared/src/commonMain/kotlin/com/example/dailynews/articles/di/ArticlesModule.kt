@@ -1,5 +1,7 @@
 package com.example.dailynews.articles.di
 
+import com.example.dailynews.articles.data.ArticlesDataSource
+import com.example.dailynews.articles.data.ArticlesRepository
 import com.example.dailynews.articles.service.ArticlesService
 import com.example.dailynews.articles.service.ArticlesUseCase
 import com.example.dailynews.articles.ui.ArticlesViewModel
@@ -10,4 +12,6 @@ val articlesModule = module {
     single<ArticlesService> { ArticlesService(get()) }
     single<ArticlesUseCase> { ArticlesUseCase(get()) }
     single<ArticlesViewModel> { ArticlesViewModel(get()) }
+    single<ArticlesDataSource> { ArticlesDataSource(get()) }
+    single<ArticlesRepository> { ArticlesRepository(get(), get()) }
 }
