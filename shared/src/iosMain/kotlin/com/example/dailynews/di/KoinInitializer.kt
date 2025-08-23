@@ -7,7 +7,7 @@ import org.koin.core.context.startKoin
 
 fun initKoin() {
     /** Dependency graph */
-    val modules = sharedKoinModules
+    val modules = sharedKoinModules + databaseModule
 
     startKoin {
         modules(modules)
