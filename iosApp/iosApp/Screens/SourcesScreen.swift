@@ -93,7 +93,3 @@ struct SourceItemView: View {
         .padding(16)
     }
 }
-
-#Preview {
-    SourcesScreen()
-}

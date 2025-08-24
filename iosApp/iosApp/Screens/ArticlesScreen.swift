@@ -12,8 +12,8 @@ extension ArticlesScreen {
     
     @MainActor
     class ArticlesViewModelWrapper: ObservableObject {
-        let articlesViewModel: ArticlesViewModel
         
+        let articlesViewModel: ArticlesViewModel
         
         init() {
             articlesViewModel = ArticlesInjector().articlesViewModel
