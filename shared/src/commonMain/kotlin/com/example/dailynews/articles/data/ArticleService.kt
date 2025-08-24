@@ -1,8 +1,7 @@
-package com.example.dailynews.articles.service
+package com.example.dailynews.articles.data
 
 
-import com.example.dailynews.articles.domain.ArticleRaw
-import com.example.dailynews.articles.domain.ArticlesResponse
+import com.example.dailynews.articles.data.ArticleRaw
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get

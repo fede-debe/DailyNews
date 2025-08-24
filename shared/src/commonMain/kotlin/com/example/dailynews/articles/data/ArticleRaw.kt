@@ -1,4 +1,4 @@
-package com.example.dailynews.articles.domain
+package com.example.dailynews.articles.data
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
