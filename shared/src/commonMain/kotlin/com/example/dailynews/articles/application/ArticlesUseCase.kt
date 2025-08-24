@@ -1,9 +1,8 @@
-package com.example.dailynews.articles.service
+package com.example.dailynews.articles.application
 
 import com.example.dailynews.Constants
 import com.example.dailynews.articles.data.ArticlesRepository
-import com.example.dailynews.articles.domain.Article
-import com.example.dailynews.articles.domain.ArticleRaw
+import com.example.dailynews.articles.data.ArticleRaw
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.daysUntil
 import kotlinx.datetime.toLocalDateTime
@@ -42,9 +41,9 @@ class ArticlesUseCase(private val repository: ArticlesRepository) {
      * */
     @OptIn(ExperimentalTime::class)
     private fun getDaysAgoString(date: String): String {
-        val today = Clock.System.todayIn(TimeZone.currentSystemDefault())
+        val today = Clock.System.todayIn(TimeZone.Companion.currentSystemDefault())
         val days = today.daysUntil(
-            Instant.parse(date).toLocalDateTime(TimeZone.currentSystemDefault()).date
+            Instant.Companion.parse(date).toLocalDateTime(TimeZone.Companion.currentSystemDefault()).date
         )
 
         val result = when {
