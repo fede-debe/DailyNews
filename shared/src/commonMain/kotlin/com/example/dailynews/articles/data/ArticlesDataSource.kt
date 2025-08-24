@@ -1,6 +1,5 @@
 package com.example.dailynews.articles.data
 
-import com.example.dailynews.articles.data.ArticleRaw
 import com.example.dailynews.db.DailyNewsDatabase
 
 class ArticlesDataSource(private val database: DailyNewsDatabase) {

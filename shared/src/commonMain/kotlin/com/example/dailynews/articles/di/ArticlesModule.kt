@@ -2,9 +2,9 @@ package com.example.dailynews.articles.di
 
 import com.example.dailynews.articles.data.ArticlesDataSource
 import com.example.dailynews.articles.data.ArticlesRepository
-import com.example.dailynews.articles.service.ArticlesService
-import com.example.dailynews.articles.service.ArticlesUseCase
-import com.example.dailynews.articles.ui.ArticlesViewModel
+import com.example.dailynews.articles.data.ArticlesService
+import com.example.dailynews.articles.application.ArticlesUseCase
+import com.example.dailynews.articles.presentation.ArticlesViewModel
 import org.koin.dsl.module
 
 val articlesModule = module {

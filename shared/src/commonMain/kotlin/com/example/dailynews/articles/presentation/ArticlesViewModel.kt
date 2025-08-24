@@ -1,8 +1,8 @@
-package com.example.dailynews.articles.ui
+package com.example.dailynews.articles.presentation
 
 import com.example.dailynews.BaseViewModel
-import com.example.dailynews.articles.domain.Article
-import com.example.dailynews.articles.service.ArticlesUseCase
+import com.example.dailynews.articles.application.Article
+import com.example.dailynews.articles.application.ArticlesUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

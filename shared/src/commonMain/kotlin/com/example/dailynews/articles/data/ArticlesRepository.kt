@@ -1,7 +1,6 @@
 package com.example.dailynews.articles.data
 
-import com.example.dailynews.articles.domain.ArticleRaw
-import com.example.dailynews.articles.service.ArticlesService
+import com.example.dailynews.articles.data.ArticleRaw
 
 class ArticlesRepository(
     private val dataSource: ArticlesDataSource,

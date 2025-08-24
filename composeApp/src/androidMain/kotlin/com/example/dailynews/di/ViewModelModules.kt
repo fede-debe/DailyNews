@@ -1,6 +1,6 @@
 package com.example.dailynews.di
 
-import com.example.dailynews.articles.ui.ArticlesViewModel
+import com.example.dailynews.articles.presentation.ArticlesViewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 

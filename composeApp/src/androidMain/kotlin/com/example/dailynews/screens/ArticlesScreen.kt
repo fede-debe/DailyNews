@@ -27,9 +27,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
-import com.example.dailynews.articles.domain.Article
-import com.example.dailynews.articles.ui.ArticlesState
-import com.example.dailynews.articles.ui.ArticlesViewModel
+import com.example.dailynews.articles.application.Article
+import com.example.dailynews.articles.presentation.ArticlesState
+import com.example.dailynews.articles.presentation.ArticlesViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshState
 import org.koin.androidx.compose.koinViewModel
