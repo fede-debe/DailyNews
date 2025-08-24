@@ -25,6 +25,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "Shared"
             isStatic = true
+            freeCompilerArgs += "-Xbinary=bundleId=com.example.dailynews.shared"
         }
     }
     
