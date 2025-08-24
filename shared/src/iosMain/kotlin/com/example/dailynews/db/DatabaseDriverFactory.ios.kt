@@ -1,8 +1,7 @@
-package com.example.dailynews.articles.db
+package com.example.dailynews.db
 
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.native.NativeSqliteDriver
-import com.example.dailynews.db.DailyNewsDatabase
 
 actual class DatabaseDriverFactory() {
 
