@@ -18,7 +18,6 @@ kotlinxCoroutinesCore = "1.10.2"
 lifecycleViewmodelKtx = "2.9.2"
 coilCompose = "2.7.0"
 navigationCompose = "2.9.3"
-skie = "0.10.5"
 ktorClient = "3.2.3"
 kotlinxDatetime = "0.7.1"
 koin = "4.1.0"
@@ -65,5 +64,4 @@ composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMul
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinPluginSerialization" }
-skie = { id = "co.touchlab.skie", version.ref = "skie" }
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
