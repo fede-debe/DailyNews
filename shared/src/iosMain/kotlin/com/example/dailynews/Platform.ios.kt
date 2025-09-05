@@ -20,3 +20,5 @@ actual class Platform() {
         )
     }
 }
+
+actual fun platform(): Platform = Platform()

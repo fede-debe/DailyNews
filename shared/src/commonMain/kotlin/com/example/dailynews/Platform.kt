@@ -8,3 +8,5 @@ expect class Platform {
 
     fun logSystemInfo()
 }
+
+expect fun platform(): Platform
