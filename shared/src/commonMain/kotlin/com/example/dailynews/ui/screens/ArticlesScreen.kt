@@ -132,8 +132,8 @@ fun ArticleItemView(article: Article) {
             onLoading = {
                 ErrorMessage("Loading")
             },
-            onFailure = {
-                ErrorMessage("Error getting the image")
+            onFailure = { exception ->
+                ErrorMessage(exception.message.toString())
             }
         )
         Spacer(modifier = Modifier.height(4.dp))
