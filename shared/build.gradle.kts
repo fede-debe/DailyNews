@@ -49,6 +49,7 @@ kotlin {
             implementation(libs.compose.material)
             implementation(libs.koin.compose)
             implementation(libs.kamel.image)
+            implementation(libs.kamel.image.default)
         }
 
         androidMain.dependencies {
