@@ -21,6 +21,8 @@ navigationCompose = "2.9.3"
 ktorClient = "3.2.3"
 kotlinxDatetime = "0.7.1"
 koin = "4.1.0"
+koinCompose = "4.1.0"
+kamelImage = "1.0.7"
 sqlDelight = "2.1.0"
 
 [libraries]
@@ -50,8 +52,11 @@ ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "kto
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCompose" }
 
 compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "composeMultiplatform" }
+
+kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamelImage" }
 
 sql-coroutines-extensions = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
 sql-native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
