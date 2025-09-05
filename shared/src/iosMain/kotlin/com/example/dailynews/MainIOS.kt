@@ -1,8 +1,6 @@
 package com.example.dailynews
 
 import androidx.compose.ui.window.ComposeUIViewController
-import com.example.dailynews.ui.App
-import com.example.dailynews.ui.screens.AboutScreen
 import com.example.dailynews.ui.screens.SourcesScreen
 
 /** MainViewController is like fragment/activity in Android */
