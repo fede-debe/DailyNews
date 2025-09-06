@@ -2,7 +2,6 @@ package com.example.dailynews
 
 import androidx.compose.ui.window.ComposeUIViewController
 import com.example.dailynews.ui.App
-import com.example.dailynews.ui.screens.ArticlesScreen
 
 /** MainViewController is like fragment/activity in Android */
 fun MainViewController() = ComposeUIViewController {
