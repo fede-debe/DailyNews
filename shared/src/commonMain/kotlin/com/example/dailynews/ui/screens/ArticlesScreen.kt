@@ -10,10 +10,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.List
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -27,6 +31,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import com.example.dailynews.articles.application.Article
 import com.example.dailynews.articles.presentation.ArticlesState
 import com.example.dailynews.articles.presentation.ArticlesViewModel
@@ -36,8 +43,15 @@ import io.kamel.image.asyncPainterResource
 import io.ktor.http.Url
 import org.koin.compose.koinInject
 
+/** We need a class to use the Screen interface from voyager */
+class ArticlesScreen : Screen {
+    @Composable
+    override fun Content() {
+        ArticlesScreenContent()
+    }
+}
 @Composable
-fun ArticlesScreen(
+fun ArticlesScreenContent(
     articlesViewModel: ArticlesViewModel = koinInject()
 ) {
 
@@ -58,20 +72,26 @@ fun ArticlesScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AppBar() {
+    val navigator = LocalNavigator.currentOrThrow
+
     TopAppBar(
         title = { Text(text = "Articles") },
         actions = {
-            IconButton(onClick = {}) {
-//                Icon(
-//                    imageVector = Icons.AutoMirrored.Outlined.List,
-//                    contentDescription = "Sources Button",
-//                )
+            IconButton(onClick = {
+                navigator.push(SourcesScreen())
+            }) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Outlined.List,
+                    contentDescription = "Sources Button",
+                )
             }
-            IconButton(onClick = {}) {
-//                Icon(
-//                    imageVector = Icons.Outlined.Info,
-//                    contentDescription = "About Device Button",
-//                )
+            IconButton(onClick = {
+                navigator.push(AboutScreen())
+            }) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "About Device Button",
+                )
             }
         }
     )
