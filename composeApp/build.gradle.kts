@@ -27,17 +27,9 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-
-            implementation(libs.coil.compose)
-            implementation(libs.androidx.navigation.compose)
-
             implementation(libs.koin.android)
-            implementation(libs.koin.androidx.compose)
-            implementation (libs.accompanist.swiperefresh)
-
             implementation(projects.shared)
         }
         commonTest.dependencies {
