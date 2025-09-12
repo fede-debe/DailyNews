@@ -1,37 +1,58 @@
 # DailyNews
 
-An educational Kotlin Multiplatform (KMP) prototype app from the **Kotlin Multiplatform Masterclass** by Petros Efthymiou. This early-stage version offers a native Android and iOS app sharing business logic via a common KMP module.
+Compose Multiplatform news app targeting **Android**, **iOS**, **Desktop (JVM)** and **Web (Wasm)**.  
+One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logic with Clean Architecture & MVI.
+
+<p>
+  <a href="https://kotlinlang.org/"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Multiplatform-7F52FF?logo=kotlin&logoColor=white"></a>
+  <a href="https://www.jetbrains.com/lp/compose-multiplatform/"><img alt="Compose Multiplatform" src="https://img.shields.io/badge/Compose-Multiplatform-000?logo=jetpackcompose&logoColor=white"></a>
+  <a href="https://ktor.io/"><img alt="Ktor" src="https://img.shields.io/badge/Ktor-2.x-0B3D91?logo=kotlin&logoColor=white"></a>
+  <a href="https://cashapp.github.io/sqldelight/"><img alt="SQLDelight" src="https://img.shields.io/badge/SQLDelight-1.x-1E88E5"></a>
+  <a href="https://insert-koin.io/"><img alt="Koin" src="https://img.shields.io/badge/Koin-DI-8BC34A"></a>
+</p>
+
+## Showcase
+
+<table>
+  <tr>
+    <td><video src="assets/showcase/android.mp4"  width="100%" controls muted playsinline></video></td>
+    <td><video src="assets/showcase/ios.mp4"      width="100%" controls muted playsinline></video></td>
+  </tr>
+  <tr>
+    <td><video src="assets/showcase/desktop.mp4"  width="100%" controls muted playsinline></video></td>
+    <td><video src="assets/showcase/web.mp4"      width="100%" controls muted playsinline></video></td>
+  </tr>
+</table>
 
 ---
 
-## Features
-
-- Fetches, caches, and displays top US business news using a News API.
-- Shows a list of news sources utilized for data fetching.
-- Includes a device info screen to display user device details.
-
----
-
-## Tech Stack
-
-- **Architecture & Patterns**: Clean Architecture, MVI (Model–View–Intent)
-- **Networking**: Ktor
-- **Local Data**: SQLDelight
-- **DI (Dependency Injection)**: Koin
-- **Android UI**: Jetpack Compose
-- **iOS UI**: SwiftUI
-- **Shared Module**: Kotlin Multiplatform (KMP)
-
----
+## Highlights
+- **Single codebase → 4 platforms** (Android, iOS, Desktop, Web/Wasm)
+- **Clean Architecture + MVI** presentation (State, Intent, Reducer)
+- **Shared data layer** with Ktor (HTTP) and SQLDelight (storage)
+- **Dependency Injection** via Koin
+- **Compose UI** across all targets
 
 ## Project Structure
+```
+shared/         # KMP business logic (domain, data, MVI)
+composeApp/     # Android app (Jetpack Compose)
+iosApp/         # iOS host app (UIKit/SwiftUI shell + shared KMP)
+desktop/        # Desktop JVM app (Compose Desktop)
+web/            # Web (Wasm) app (Compose for Web/Wasm)
+```
 
-The UI layers reside in `androidApp` and `iosApp`, while the shared module—containing Business Logic, ViewModels, and Data—resides in `shared`.  
-(Include architectural diagrams/screenshots here as needed.)
+## Getting Started (very short)
+- Clone the repo and open in **Android Studio** (latest stable with KMP support).
+- For iOS: open `iosApp/` in Xcode to run on a simulator/device.
+- For Desktop/Web: run the corresponding Gradle run configurations from the IDE.
+
+
+## Tech Stack
+- **Language:** Kotlin (Multiplatform)
+- **UI:** Compose Multiplatform (Jetpack Compose on Android/Desktop; Compose for Web/Wasm)
+- **DI:** Koin
+- **Networking:** Ktor
+- **Persistence:** SQLDelight
 
 ---
-
-## Getting Started
-
-1. Explore common logic located in `shared`.
-2. Android and iOS implementations reside in `androidApp` and `iosApp`, respectively.
