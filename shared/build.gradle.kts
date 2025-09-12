@@ -1,4 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -17,7 +20,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_17)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -32,6 +35,10 @@ kotlin {
 
     jvm("desktop")
 
+    wasmJs {
+        browser { binaries.executable() }
+    }
+
     sourceSets {
         commonMain.dependencies {
             // Multiplatform dependencies
@@ -43,13 +50,13 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kotlinx.datetime)
             implementation(libs.koin.core)
+            implementation(libs.koin.compose)
 
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.components.resources)
             implementation(compose.material3)
             implementation(libs.compose.material)
-            implementation(libs.koin.compose)
             implementation(libs.kamel.image)
             implementation(libs.kamel.image.default)
             implementation(libs.material.icons.extended)
@@ -67,13 +74,22 @@ kotlin {
             implementation(libs.ktor.client.darwin)
             implementation(libs.sql.native.driver)
         }
-        
+
         val desktopMain by getting {
             dependencies {
                 implementation(libs.ktor.client.cio)
                 implementation(libs.sql.desktop.driver)
             }
         }
+
+        wasmJsMain.dependencies {
+            implementation(libs.ktor.client.js.wasm)
+            implementation(libs.ktor.client.cn.wasm)
+            implementation(libs.ktor.serialization.json.wasm)
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+        }
+
 
         commonTest.dependencies {
             implementation(libs.kotlin.test)

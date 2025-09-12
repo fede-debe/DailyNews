@@ -21,3 +21,4 @@ rootProject.name = "DailyNews"
 include(":composeApp")
 include(":desktop")
 include(":shared")
+include(":web")
