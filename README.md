@@ -76,14 +76,25 @@ One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logi
 | Module | Platform(s) | Purpose |
 |---|---|---|
 | `shared/` 🧠 | All | KMP business logic — **domain**, **data**, **MVI** (state, intent, reducer) |
-| `composeApp/` 🤖 | Android | Jetpack Compose app shell + DI wiring (Koin) |
+| `composeApp/` 🤖 | Android | Jetpack Compose app shell + DI (Koin) |
 | `iosApp/` 🍎 | iOS | SwiftUI/UIKit host using the shared KMP layer |
 | `desktop/` 🖥️ | Desktop (JVM) | Compose Desktop app |
 | `web/` 🌐 | Web (Wasm) | Compose Multiplatform (Wasm) app |
 
 <details>
   <summary><strong>Mini folder tree (tap to expand)</strong></summary>
+  <pre><code>shared/
+ ├─ domain/          # use cases, models
+ ├─ data/            # repositories, Ktor, SQLDelight
+ └─ presentation/    # MVI: state, intent, reducer
+composeApp/
+ └─ src/
+iosApp/
+desktop/
+web/
+  </code></pre>
 </details>
+
 
 ## Getting Started (very short)
 - Clone the repo and open in **Android Studio** (latest stable with KMP support).
