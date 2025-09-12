@@ -2,13 +2,13 @@ package com.example.dailynews.sources.data
 
 import com.example.dailynews.db.DailyNewsDatabase
 
-class SourcesDataSource(private val db: DailyNewsDatabase) {
+class SourcesDataSource(private val db: DailyNewsDatabase?) {
 
     fun getAllSources(): List<SourceRaw> =
-        db.dailyNewsDatabaseQueries.selectAllSources(::mapSource).executeAsList()
+        db?.dailyNewsDatabaseQueries?.selectAllSources(::mapSource)?.executeAsList() ?: listOf()
 
     fun clearSources() =
-        db.dailyNewsDatabaseQueries.removeAllSources()
+        db?.dailyNewsDatabaseQueries?.removeAllSources()
 
     private fun mapSource(
         id: String,
@@ -27,7 +27,7 @@ class SourcesDataSource(private val db: DailyNewsDatabase) {
     }
 
     internal fun createSources(sources: List<SourceRaw>) {
-        db.dailyNewsDatabaseQueries.transaction {
+        db?.dailyNewsDatabaseQueries?.transaction {
             sources.forEach { source ->
                 insertSource(source)
             }
@@ -35,7 +35,7 @@ class SourcesDataSource(private val db: DailyNewsDatabase) {
     }
 
     private fun insertSource(source: SourceRaw) {
-        db.dailyNewsDatabaseQueries.insertSource(
+        db?.dailyNewsDatabaseQueries?.insertSource(
             source.id,
             source.name,
             source.desc,

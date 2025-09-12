@@ -2,10 +2,10 @@ package com.example.dailynews.articles.data
 
 import com.example.dailynews.db.DailyNewsDatabase
 
-class ArticlesDataSource(private val database: DailyNewsDatabase) {
+class ArticlesDataSource(private val database: DailyNewsDatabase?) {
 
     fun getAllArticles(): List<ArticleRaw> =
-        database.dailyNewsDatabaseQueries.selectAllArticles(::mapToArticleRaw).executeAsList()
+        database?.dailyNewsDatabaseQueries?.selectAllArticles(::mapToArticleRaw)?.executeAsList() ?: listOf()
 
     /**
       A transaction is a block of queries that must all be successful.
@@ -16,7 +16,7 @@ class ArticlesDataSource(private val database: DailyNewsDatabase) {
       successfully as a single, atomic unit.
     */
     fun insertArticles(articles: List<ArticleRaw>) {
-        database.dailyNewsDatabaseQueries.transaction {
+        database?.dailyNewsDatabaseQueries?.transaction {
             articles.forEach { articleRaw ->
                 insertArticle(articleRaw)
             }
@@ -24,10 +24,10 @@ class ArticlesDataSource(private val database: DailyNewsDatabase) {
     }
 
     fun clearArticles() =
-        database.dailyNewsDatabaseQueries.removeAllArticles()
+        database?.dailyNewsDatabaseQueries?.removeAllArticles()
 
     private fun insertArticle(articleRaw: ArticleRaw) {
-        database.dailyNewsDatabaseQueries.insertArticle(
+        database?.dailyNewsDatabaseQueries?.insertArticle(
             articleRaw.title,
             articleRaw.desc,
             articleRaw.date,
