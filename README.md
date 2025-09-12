@@ -16,47 +16,33 @@ One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logi
 <table>
   <tr>
     <td>
-      <video width="100%" controls muted playsinline>
-        <source src="assets/showcase/android.mp4?raw=1" type="video/mp4">
-      </video>
-      <br/>
-      <!-- Fallback thumbnail -->
-      <a href="assets/showcase/android.mp4?raw=1">
-        <img src="assets/showcase/android.png" width="100%" alt="Android demo"/>
-      </a>
+      <picture>
+        <source srcset="assets/showcase/android.webp" type="image/webp">
+        <img src="assets/showcase/android.gif" alt="Android demo" style="max-width:100%;height:auto;">
+      </picture>
     </td>
     <td>
-      <video width="100%" controls muted playsinline>
-        <source src="assets/showcase/ios.mp4?raw=1" type="video/mp4">
-      </video>
-      <br/>
-      <a href="assets/showcase/ios.mp4?raw=1">
-        <img src="assets/showcase/ios.png" width="100%" alt="iOS demo"/>
-      </a>
+      <picture>
+        <source srcset="assets/showcase/ios.webp" type="image/webp">
+        <img src="assets/showcase/ios.gif" alt="iOS demo" style="max-width:100%;height:auto;">
+      </picture>
     </td>
   </tr>
   <tr>
     <td>
-      <video width="100%" controls muted playsinline>
-        <source src="assets/showcase/desktop.mp4?raw=1" type="video/mp4">
-      </video>
-      <br/>
-      <a href="assets/showcase/desktop.mp4?raw=1">
-        <img src="assets/showcase/desktop.png" width="100%" alt="Desktop demo"/>
-      </a>
+      <picture>
+        <source srcset="assets/showcase/desktop.webp" type="image/webp">
+        <img src="assets/showcase/desktop.gif" alt="Desktop demo" style="max-width:100%;height:auto;">
+      </picture>
     </td>
     <td>
-      <video width="100%" controls muted playsinline>
-        <source src="assets/showcase/web.mp4?raw=1" type="video/mp4">
-      </video>
-      <br/>
-      <a href="assets/showcase/web.mp4?raw=1">
-        <img src="assets/showcase/web.png" width="100%" alt="Web demo"/>
-      </a>
+      <picture>
+        <source srcset="assets/showcase/web.webp" type="image/webp">
+        <img src="assets/showcase/web.gif" alt="Web demo" style="max-width:100%;height:auto;">
+      </picture>
     </td>
   </tr>
 </table>
-
 
 ---
 
