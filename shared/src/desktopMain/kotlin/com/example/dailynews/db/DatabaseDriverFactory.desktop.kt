@@ -4,7 +4,7 @@ import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
 
 actual class DatabaseDriverFactory {
-    actual fun createDriver(): SqlDriver {
+    actual fun createDriver(): SqlDriver? {
         return JdbcSqliteDriver(
             url = "jdbc:sqlite:DailyNewsDatabase.db",
             schema = DailyNewsDatabase.Schema

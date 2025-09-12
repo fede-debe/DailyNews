@@ -9,7 +9,7 @@ import org.koin.dsl.module
 val databaseModule = module {
 
     /** Instance needed to create the database*/
-    single<SqlDriver> { DatabaseDriverFactory(androidContext()).createDriver() }
+    single<SqlDriver> { DatabaseDriverFactory(androidContext()).createDriver()!! }
 
     single<DailyNewsDatabase> { DailyNewsDatabase(get()) }
 }
