@@ -20,22 +20,24 @@ One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logi
 ---
 
 ### Android
-<div style="max-width:420px;margin:0 auto;">
+<div style="text-align:center;margin:0 auto;">
   <picture>
     <source srcset="assets/showcase/android.webp" type="image/webp">
     <img src="assets/showcase/android.gif"
          alt="Android demo"
-         style="display:block;width:100%;height:auto;border-radius:8px;">
+         width="360"
+         style="display:block;margin:0 auto;height:auto;border-radius:8px;">
   </picture>
 </div>
 
 ### iOS
-<div style="max-width:420px;margin:0 auto;">
+<div style="text-align:center;margin:0 auto;">
   <picture>
     <source srcset="assets/showcase/ios.webp" type="image/webp">
     <img src="assets/showcase/ios.gif"
          alt="iOS demo"
-         style="display:block;width:100%;height:auto;border-radius:8px;">
+         width="360"
+         style="display:block;margin:0 auto;height:auto;border-radius:8px;">
   </picture>
 </div>
 
@@ -58,6 +60,7 @@ One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logi
          style="display:block;width:100%;height:auto;border-radius:8px;">
   </picture>
 </div>
+
 
 ---
 
