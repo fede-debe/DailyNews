@@ -11,38 +11,53 @@ One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logi
   <a href="https://insert-koin.io/"><img alt="Koin" src="https://img.shields.io/badge/Koin-DI-8BC34A"></a>
 </p>
 
-## Showcase
+## Showcase by platform
+- [Android](#android)
+- [iOS](#ios)
+- [Desktop](#desktop)
+- [Web](#web)
 
-<table>
-  <tr>
-    <td>
-      <picture>
-        <source srcset="assets/showcase/android.webp" type="image/webp">
-        <img src="assets/showcase/android.gif" alt="Android demo" style="max-width:100%;height:auto;">
-      </picture>
-    </td>
-    <td>
-      <picture>
-        <source srcset="assets/showcase/ios.webp" type="image/webp">
-        <img src="assets/showcase/ios.gif" alt="iOS demo" style="max-width:100%;height:auto;">
-      </picture>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <picture>
-        <source srcset="assets/showcase/desktop.webp" type="image/webp">
-        <img src="assets/showcase/desktop.gif" alt="Desktop demo" style="max-width:100%;height:auto;">
-      </picture>
-    </td>
-    <td>
-      <picture>
-        <source srcset="assets/showcase/web.webp" type="image/webp">
-        <img src="assets/showcase/web.gif" alt="Web demo" style="max-width:100%;height:auto;">
-      </picture>
-    </td>
-  </tr>
-</table>
+---
+
+### Android
+<div style="max-width:420px;margin:0 auto;">
+  <picture>
+    <source srcset="assets/showcase/android.webp" type="image/webp">
+    <img src="assets/showcase/android.gif"
+         alt="Android demo"
+         style="display:block;width:100%;height:auto;border-radius:8px;">
+  </picture>
+</div>
+
+### iOS
+<div style="max-width:420px;margin:0 auto;">
+  <picture>
+    <source srcset="assets/showcase/ios.webp" type="image/webp">
+    <img src="assets/showcase/ios.gif"
+         alt="iOS demo"
+         style="display:block;width:100%;height:auto;border-radius:8px;">
+  </picture>
+</div>
+
+### Desktop
+<div style="max-width:1100px;margin:0 auto;">
+  <picture>
+    <source srcset="assets/showcase/desktop.webp" type="image/webp">
+    <img src="assets/showcase/desktop.gif"
+         alt="Desktop demo"
+         style="display:block;width:100%;height:auto;border-radius:8px;">
+  </picture>
+</div>
+
+### Web
+<div style="max-width:1100px;margin:0 auto;">
+  <picture>
+    <source srcset="assets/showcase/web.webp" type="image/webp">
+    <img src="assets/showcase/web.gif"
+         alt="Web demo"
+         style="display:block;width:100%;height:auto;border-radius:8px;">
+  </picture>
+</div>
 
 ---
 
