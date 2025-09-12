@@ -15,14 +15,48 @@ One codebase, four platforms — shared Kotlin Multiplatform (KMP) business logi
 
 <table>
   <tr>
-    <td><video src="assets/showcase/android.mp4"  width="100%" controls muted playsinline></video></td>
-    <td><video src="assets/showcase/ios.mp4"      width="100%" controls muted playsinline></video></td>
+    <td>
+      <video width="100%" controls muted playsinline>
+        <source src="assets/showcase/android.mp4?raw=1" type="video/mp4">
+      </video>
+      <br/>
+      <!-- Fallback thumbnail -->
+      <a href="assets/showcase/android.mp4?raw=1">
+        <img src="assets/showcase/android.png" width="100%" alt="Android demo"/>
+      </a>
+    </td>
+    <td>
+      <video width="100%" controls muted playsinline>
+        <source src="assets/showcase/ios.mp4?raw=1" type="video/mp4">
+      </video>
+      <br/>
+      <a href="assets/showcase/ios.mp4?raw=1">
+        <img src="assets/showcase/ios.png" width="100%" alt="iOS demo"/>
+      </a>
+    </td>
   </tr>
   <tr>
-    <td><video src="assets/showcase/desktop.mp4"  width="100%" controls muted playsinline></video></td>
-    <td><video src="assets/showcase/web.mp4"      width="100%" controls muted playsinline></video></td>
+    <td>
+      <video width="100%" controls muted playsinline>
+        <source src="assets/showcase/desktop.mp4?raw=1" type="video/mp4">
+      </video>
+      <br/>
+      <a href="assets/showcase/desktop.mp4?raw=1">
+        <img src="assets/showcase/desktop.png" width="100%" alt="Desktop demo"/>
+      </a>
+    </td>
+    <td>
+      <video width="100%" controls muted playsinline>
+        <source src="assets/showcase/web.mp4?raw=1" type="video/mp4">
+      </video>
+      <br/>
+      <a href="assets/showcase/web.mp4?raw=1">
+        <img src="assets/showcase/web.png" width="100%" alt="Web demo"/>
+      </a>
+    </td>
   </tr>
 </table>
+
 
 ---
 
